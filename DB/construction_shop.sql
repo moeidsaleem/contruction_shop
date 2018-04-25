@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : MYLOCAL
 Source Server Version : 50505
 Source Host           : localhost:3306
-Source Database       : contruction_shop
+Source Database       : construction_shop
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-04-25 15:20:44
+Date: 2018-04-25 18:43:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,8 +26,8 @@ CREATE TABLE `clients` (
   `phone` int(11) DEFAULT NULL,
   `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `description` text COLLATE utf8_unicode_ci,
-  `deft_amount` int(20) DEFAULT NULL,
-  `deft_due` datetime DEFAULT NULL,
+  `debt_amount` int(20) DEFAULT NULL,
+  `debt_due` datetime DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -102,7 +102,7 @@ CREATE TABLE `outs` (
 -- ----------------------------
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `type_id` int(11) DEFAULT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE `products` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of products
@@ -126,18 +126,20 @@ CREATE TABLE `products` (
 -- ----------------------------
 DROP TABLE IF EXISTS `product_types`;
 CREATE TABLE `product_types` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of product_types
 -- ----------------------------
+INSERT INTO `product_types` VALUES ('1', 'test', 'test', 'teetetetet', null, null);
+INSERT INTO `product_types` VALUES ('2', 'tes122222', 'testt', 'tetet', '2018-04-25 17:24:23', '2018-04-25 17:24:35');
 
 -- ----------------------------
 -- Table structure for sub_product_outs

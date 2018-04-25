@@ -1,0 +1,9 @@
+/tmp/*
+/logs/*
+/nbproject/*
+/webroot/.sass-cache/*
+/webroot/all*.js
+/.idea/*
+*/.idea/*
+/vendor/*
+*/vender/*

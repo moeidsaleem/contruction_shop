@@ -173,25 +173,6 @@ class UsersController extends AppController
                     //$now = Time::now();
                     $this->Auth->setUser($user);
                     return $this->redirect($this->Auth->redirectUrl());
-
-                    /*$last_edit = $user['last_edit'];
-                    $last_edit = new Time($last_edit);
-                    $timestamp_last_edit = $last_edit->toUnixString();
-                    $timestamp_last_edit = strtotime('+60 day', $timestamp_last_edit);
-
-                    if (time() <= $timestamp_last_edit)
-                    {
-                        $this->Auth->setUser($user);
-                        return $this->redirect($this->Auth->redirectUrl());
-                    }
-                    else
-                    {
-                        $this->Auth->allow(['edit_password']);
-                        // $this->session->write('User.CheckPassword', 1);
-                        $this->session->write('User.CheckPassword', $user);
-                        return $this->redirect(['action' => 'edit_password']);
-                    }*/
-                    //return $this->redirect($this->Auth->redirectUrl());
                 } else {
                     $this->Flash->error( __('Username or password is incorrect') );
                 }

@@ -84,6 +84,7 @@ else{
 		</div>
 		<!-- END CONTENT -->
 	</div>
+    
 	<?php
 		echo $this->element('logoutCountDown');
 	?>
@@ -98,6 +99,8 @@ else{
 
 <?php
 $script_include = array(
+        '/admin/js/jquery-2.1.4.min.js',
+        '/admin/js/jquery.validate.min.js',
 		'/admin/backend/global/plugins/jquery-migrate.min.js',
 		'/admin/backend/global/plugins/jquery-ui/jquery-ui.min.js',
 		'/admin/backend/global/plugins/bootstrap/js/bootstrap.min.js',

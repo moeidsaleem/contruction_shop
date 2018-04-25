@@ -26,6 +26,8 @@ class AppController extends BaseController
                 'Strict-Transport-Security'=>'max-age=15552000; includeSubDomains; preload'
             )
         );
+        $this->loadModel('ProductTypes');
+        $this->loadModel('Products');
         $this->loadComponent('Auth', [
             'loginAction' => [
                 'controller' => 'Users',
@@ -80,6 +82,40 @@ class AppController extends BaseController
                     'add' => array(
                         'text' => 'Add new users',
                         'link' => Router::url(['controller' => 'users', 'action' => 'add']),
+                        'icon' => '',
+                    )
+                )
+            ),
+            'products' => array(
+                'text' => 'products',
+                'link' => Router::url(['controller' => 'products', 'action' => 'index']),
+                'icon' => '',
+                'sub_menu' => array(
+                    'index' => array(
+                        'text' => 'List users',
+                        'link' => Router::url(['controller' => 'products','action' => 'index']),
+                        'icon' => '',
+                    ),
+                    'add' => array(
+                        'text' => 'Add new users',
+                        'link' => Router::url(['controller' => 'products', 'action' => 'add']),
+                        'icon' => '',
+                    )
+                )
+            ),
+            'product_types' => array(
+                'text' => 'Product Types',
+                'link' => Router::url(['controller' => 'ProductTypes', 'action' => 'index']),
+                'icon' => '',
+                'sub_menu' => array(
+                    'index' => array(
+                        'text' => 'List ProductTypes',
+                        'link' => Router::url(['controller' => 'ProductTypes','action' => 'index']),
+                        'icon' => '',
+                    ),
+                    'add' => array(
+                        'text' => 'Add new ProductTypes',
+                        'link' => Router::url(['controller' => 'ProductTypes', 'action' => 'add']),
                         'icon' => '',
                     )
                 )

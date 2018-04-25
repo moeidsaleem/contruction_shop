@@ -5,6 +5,7 @@ function clsMainProcess(){
 		this.bind_events();
 		this.runLibs();
         this.removeClickBtnDelete();
+        this.addProductValidate();
     };
 
 	//bind event
@@ -40,6 +41,21 @@ function clsMainProcess(){
             $(e).attr('event_delete', event_delete);
         });
     };
+
+    this.addProductValidate = function () {
+        $('#add_product').validate({
+            rules:{
+                code:{
+                    required:true
+                }
+            },
+            messages:{
+                code:{
+                    required:'Input code!!!!'
+                }
+            }
+        });
+    }
 
     this.open_modal = function(message, callback){
         $('#modal_body').html(message);

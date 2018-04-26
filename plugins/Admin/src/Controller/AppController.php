@@ -87,17 +87,17 @@ class AppController extends BaseController
                 )
             ),
             'products' => array(
-                'text' => 'products',
+                'text' => 'Products',
                 'link' => Router::url(['controller' => 'products', 'action' => 'index']),
                 'icon' => '',
                 'sub_menu' => array(
                     'index' => array(
-                        'text' => 'List users',
+                        'text' => 'List Products',
                         'link' => Router::url(['controller' => 'products','action' => 'index']),
                         'icon' => '',
                     ),
                     'add' => array(
-                        'text' => 'Add new users',
+                        'text' => 'Add new Product',
                         'link' => Router::url(['controller' => 'products', 'action' => 'add']),
                         'icon' => '',
                     )
@@ -109,12 +109,12 @@ class AppController extends BaseController
                 'icon' => '',
                 'sub_menu' => array(
                     'index' => array(
-                        'text' => 'List ProductTypes',
+                        'text' => 'List Types of Product',
                         'link' => Router::url(['controller' => 'ProductTypes','action' => 'index']),
                         'icon' => '',
                     ),
                     'add' => array(
-                        'text' => 'Add new ProductTypes',
+                        'text' => 'Add new Type',
                         'link' => Router::url(['controller' => 'ProductTypes', 'action' => 'add']),
                         'icon' => '',
                     )

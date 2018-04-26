@@ -39,7 +39,7 @@
                 </div>
                 <div class="portlet-body form">
 
-                    <?php echo  $this->Form->create($productType, ['class' => 'form-horizontal']); ?>
+                    <?php echo  $this->Form->create($productType, ['class' => 'form-horizontal','id'=>'add_productTypes']); ?>
                     <div class="form-body">
                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('code', mb_convert_case('code', MB_CASE_TITLE, "UTF-8"), ['for' => 'code', 'class' => 'col-md-3 control-label']); ?>

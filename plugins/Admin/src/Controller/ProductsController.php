@@ -56,7 +56,6 @@ class ProductsController extends AppController
             'keyField'=>'id',
             'valueField'=>'name'
         ])->toArray();
-//        pr($product_types);exit;
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());

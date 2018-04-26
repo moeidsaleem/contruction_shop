@@ -7,6 +7,7 @@ function clsMainProcess() {
         this.removeClickBtnDelete();
         this.addProductValidate();
         this.addProductTypesValidation();
+        this.addSuppliersValidation();
     };
 
     //bind event
@@ -87,6 +88,27 @@ function clsMainProcess() {
                 },
                 name:{
                     required:'Name can not empty'
+                }
+            }
+        })
+    }
+
+    this.addSuppliersValidation = function (){
+        $('#add_supplier').validate({
+            rules:{
+                name:{
+                    required:true
+                },
+                phone:{
+                    required:true
+                }
+            },
+            messages:{
+                name:{
+                    required: 'Name can not be empty'
+                },
+                phone:{
+                    required:'Phone Num can not be empty'
                 }
             }
         })

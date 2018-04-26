@@ -8,6 +8,7 @@ function clsMainProcess() {
         this.addProductValidate();
         this.addProductTypesValidation();
         this.addSuppliersValidation();
+        this.addInsValidation();
     };
 
     //bind event
@@ -109,6 +110,33 @@ function clsMainProcess() {
                 },
                 phone:{
                     required:'Phone Num can not be empty'
+                }
+            }
+        })
+    }
+
+    this.addInsValidation = function (){
+        $('#add_ins').validate({
+            rules:{
+                amount:{
+                    required:true
+                },
+                cost_per_unit:{
+                    required:true
+                },
+                total_cost:{
+                    required:true
+                }
+            },
+            messages:{
+                amount:{
+                    required:'Amount can not be empty'
+                },
+                cost_per_unit:{
+                    required:'Cost per unit can not be empty'
+                },
+                total_cost:{
+                    required:'Total cost can not be empty'
                 }
             }
         })

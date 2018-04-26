@@ -29,6 +29,7 @@ class AppController extends BaseController
         $this->loadModel('ProductTypes');
         $this->loadModel('Products');
         $this->loadModel('Suppliers');
+        $this->loadModel('Ins');
         $this->loadComponent('Auth', [
             'loginAction' => [
                 'controller' => 'Users',
@@ -134,6 +135,23 @@ class AppController extends BaseController
                     'add' => array(
                         'text' => 'Add new Supplier',
                         'link' => Router::url(['controller' => 'suppliers', 'action' => 'add']),
+                        'icon' => '',
+                    )
+                )
+            ),
+            'ins' => array(
+                'text' => 'Ins',
+                'link' => Router::url(['controller' => 'ins', 'action' => 'index']),
+                'icon' => '',
+                'sub_menu' => array(
+                    'index' => array(
+                        'text' => 'List of Ins',
+                        'link' => Router::url(['controller' => 'ins','action' => 'index']),
+                        'icon' => '',
+                    ),
+                    'add' => array(
+                        'text' => 'Add new In',
+                        'link' => Router::url(['controller' => 'ins', 'action' => 'add']),
                         'icon' => '',
                     )
                 )

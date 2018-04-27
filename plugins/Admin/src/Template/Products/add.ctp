@@ -62,7 +62,7 @@
                         <div class="form-group">
                             <?php echo $this->Form->label('supplier_id', mb_convert_case('supplier_id', MB_CASE_TITLE, "UTF-8"), ['for' => 'supplier_id', 'class' => 'col-md-3 control-label']); ?>
                             <div class="col-md-9">
-                                <?php echo $this->Form->input('supplier_id',['class'=>'form-control','placeholder' => 'Supplier Id', 'label' => false]); ?>
+                                <?php echo $this->Form->select('supplier_id',$suppliers,['class'=>'form-control','placeholder' => 'Supplier Id', 'label' => false]); ?>
                             </div>
                         </div>
                         <div class="form-group">

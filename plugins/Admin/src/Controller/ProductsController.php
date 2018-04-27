@@ -56,6 +56,10 @@ class ProductsController extends AppController
             'keyField'=>'id',
             'valueField'=>'name'
         ])->toArray();
+        $suppliers=$this->Suppliers->find('list',[
+            'keyField'=>'id',
+            'valueField'=>'name'
+        ])->toArray();
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -68,6 +72,7 @@ class ProductsController extends AppController
         }
 
         $this->set('product_types',$product_types);
+        $this->set('suppliers',$suppliers);
         $this->set(compact('product'));
     }
 

@@ -30,6 +30,8 @@ class AppController extends BaseController
         $this->loadModel('Products');
         $this->loadModel('Suppliers');
         $this->loadModel('Ins');
+        $this->loadModel('Clients');
+        $this->loadModel('Outs');
         $this->loadComponent('Auth', [
             'loginAction' => [
                 'controller' => 'Users',
@@ -155,7 +157,42 @@ class AppController extends BaseController
                         'icon' => '',
                     )
                 )
+            ),
+            'clients' => array(
+                'text' => 'Clients',
+                'link' => Router::url(['controller' => 'clients', 'action' => 'index']),
+                'icon' => '',
+                'sub_menu' => array(
+                    'index' => array(
+                        'text' => 'List of Clients',
+                        'link' => Router::url(['controller' => 'clients','action' => 'index']),
+                        'icon' => '',
+                    ),
+                    'add' => array(
+                        'text' => 'Add new Clients',
+                        'link' => Router::url(['controller' => 'clients', 'action' => 'add']),
+                        'icon' => '',
+                    )
+                )
+            ),
+            'outs' => array(
+                'text' => 'Outs',
+                'link' => Router::url(['controller' => 'outs', 'action' => 'index']),
+                'icon' => '',
+                'sub_menu' => array(
+                    'index' => array(
+                        'text' => 'List of Outs',
+                        'link' => Router::url(['controller' => 'outs','action' => 'index']),
+                        'icon' => '',
+                    ),
+                    'add' => array(
+                        'text' => 'Add new Outs',
+                        'link' => Router::url(['controller' => 'outs', 'action' => 'add']),
+                        'icon' => '',
+                    )
+                )
             )
+
 //            'samples' => array(
 //                'text' => 'Samples',
 //                'link' => Router::url(['controller' => 'Samples', 'action' => 'index']),

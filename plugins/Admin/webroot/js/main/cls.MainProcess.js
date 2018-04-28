@@ -9,6 +9,7 @@ function clsMainProcess() {
         this.addProductTypesValidation();
         this.addSuppliersValidation();
         this.addInsValidation();
+        this.addClientsValidation();
     };
 
     //bind event
@@ -137,6 +138,33 @@ function clsMainProcess() {
                 },
                 total_cost:{
                     required:'Total cost can not be empty'
+                }
+            }
+        })
+    }
+
+    this.addClientsValidation = function(){
+        $('#add_clients').validate({
+            rules:{
+                code:{
+                    required:true
+                },
+                name:{
+                    required:true
+                },
+                phone:{
+                    required:true
+                }
+            },
+            messages:{
+                code:{
+                    required: 'Code can not be empty'
+                },
+                name:{
+                    required:'Name can not be empty'
+                },
+                phone:{
+                    required:'Phone No. can not be empty'
                 }
             }
         })

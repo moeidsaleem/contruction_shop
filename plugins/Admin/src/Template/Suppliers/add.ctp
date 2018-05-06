@@ -56,7 +56,7 @@
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('phone', mb_convert_case('phone', MB_CASE_TITLE, "UTF-8"), ['for' => 'phone', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('phone',['class'=>'form-control','placeholder' => 'Phone', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('phone',['class'=>'form-control','placeholder' => 'Phone', 'label' => false, 'id'=>'phoneSupplier_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">

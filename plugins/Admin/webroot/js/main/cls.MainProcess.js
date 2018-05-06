@@ -5,11 +5,17 @@ function clsMainProcess() {
         this.bind_events();
         this.runLibs();
         this.removeClickBtnDelete();
+        this.totalInCalculation();
         this.addProductValidate();
         this.addProductTypesValidation();
         this.addSuppliersValidation();
         this.addInsValidation();
         this.addClientsValidation();
+        this.priceProductIsNumeric();
+        this.phoneSupplierIsNumeric();
+        this.amountInIsNumeric();
+        this.cpuInIsNumeric();
+        this.totalInIsNumeric();
     };
 
     //bind event
@@ -74,6 +80,14 @@ function clsMainProcess() {
         });
     }
 
+    this.priceProductIsNumeric = function(){
+        $('#priceProduct_id').keypress(function(e){
+            if(e.which!=8 && e.which!=0 && (e.which<48 || e.which>57)){
+                return false;
+            }
+        });
+    }
+
     this.addProductTypesValidation = function () {
         $('#add_productTypes').validate({
             rules: {
@@ -116,6 +130,14 @@ function clsMainProcess() {
         })
     }
 
+    this.phoneSupplierIsNumeric = function(){
+        $('#phoneSupplier_id').keypress(function(e){
+            if(e.which!=8 && e.which!=0 && (e.which<48 || e.which>57)){
+                return false;
+            }
+        });
+    }
+
     this.addInsValidation = function (){
         $('#add_ins').validate({
             rules:{
@@ -141,6 +163,46 @@ function clsMainProcess() {
                 }
             }
         })
+    }
+
+    this.amountInIsNumeric = function(){
+        $('#amountIn_id').keypress(function(e){
+            if(e.which!=8 && e.which!=0 && (e.which<48 || e.which>57)){
+                return false;
+            }
+        });
+    }
+
+    this.cpuInIsNumeric = function(){
+        $('#cpuIn_id').keypress(function(e){
+            if(e.which!=8 && e.which!=0 && (e.which<48 || e.which>57)){
+                return false;
+            }
+        });
+    }
+
+    this.totalInIsNumeric = function(){
+        $('#totalIn_id').keypress(function(e){
+            if(e.which!=8 && e.which!=0 && (e.which<48 || e.which>57)){
+                return false;
+            }
+        });
+    }
+
+    this.totalInCalculation = function(){
+        console.log("1");
+        $('#cpuIn_id').blur(function(){
+            console.log("2");
+            if(!$('#amountIn_id').val()){
+                console.log("3");
+                $('#totalIn_id').val(parseInt("0",10));
+                console.log("4");
+            }else{
+                console.log("5");
+                $('#totalIn_id').val(parseInt($('#cpuIn_id').val(),10)*parseInt($('#amountIn_id').val(),10));
+                console.log("7");
+            }
+        });
     }
 
     this.addClientsValidation = function(){

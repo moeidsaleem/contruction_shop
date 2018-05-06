@@ -56,19 +56,19 @@
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('amount', mb_convert_case('amount', MB_CASE_TITLE, "UTF-8"), ['for' => 'amount', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('amount',['class'=>'form-control','placeholder' => 'Amount', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('amount',['class'=>'form-control','placeholder' => 'Amount', 'label' => false, 'id'=>'amountIn_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('cost_per_unit', mb_convert_case('cost_per_unit', MB_CASE_TITLE, "UTF-8"), ['for' => 'cost_per_unit', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('cost_per_unit',['class'=>'form-control','placeholder' => 'Cost Per Unit', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('cost_per_unit',['class'=>'form-control','placeholder' => 'Cost Per Unit', 'label' => false, 'id'=>'cpuIn_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('total_cost', mb_convert_case('total_cost', MB_CASE_TITLE, "UTF-8"), ['for' => 'total_cost', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('total_cost',['class'=>'form-control','placeholder' => 'Total Cost', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('total_cost',['class'=>'form-control','placeholder' => 'Total Cost', 'label' => false,'id'=>'totalIn_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">

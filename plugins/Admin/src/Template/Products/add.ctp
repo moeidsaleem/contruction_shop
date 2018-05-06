@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <?php echo $this->Form->label('price', mb_convert_case('price', MB_CASE_TITLE, "UTF-8"), ['for' => 'price', 'class' => 'col-md-3 control-label']); ?>
                             <div class="col-md-9">
-                                <?php echo $this->Form->input('price',['class'=>'form-control','placeholder' => 'Price', 'label' => false]); ?>
+                                <?php echo $this->Form->input('price',['class'=>'form-control','placeholder' => 'Price', 'label' => false, 'id'=>'priceProduct_id']); ?>
                             </div>
                         </div>
                         <div class="form-group">

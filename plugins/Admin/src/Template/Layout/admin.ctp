@@ -13,7 +13,7 @@
 	<meta content="" name="description"/>
 	<meta content="" name="author"/>
 	<style>
-		.button{
+		/* .button{
 			background-color: #1CAF9A;
 			color:#fff;
 			border:none;
@@ -26,6 +26,12 @@
 		}
 		.button:hover{
 			background:#364150;
+		} */
+
+		.btnPopup{
+			position: fixed;
+			bottom:50px;
+			left:30px;
 		}
 
 		.modal{
@@ -39,11 +45,11 @@
 		}
 
 		.modal-content{
-			background-color:#f4f4f4;
+			/* background-color:#f4f4f4;
 			/*margin:80%;*/
 			padding:20px;
 			width:30%;
-			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17); */
 		}
         /*new popup*/
         .modal.fade.in .lab-modal-body {
@@ -64,11 +70,15 @@
         }
 
         .lab-modal-body {
+			color: #000;
+			font-weight:bolder;
+			text-align:center;
             position: relative;
-            bottom: -250px;
-            margin: 150px auto 0;
+            bottom: -150px;
+			margin-top:478px;
+			margin-left:14px;
             padding: 40px;
-            max-width: 60%;
+            max-width: 35%;
             height: auto;
             background-color: rgb(248, 250, 247);
             border: 1px solid #BEBEBE;
@@ -84,6 +94,12 @@
             margin-right: -20px;
             text-shadow: 0 1px 0 #ffffff;
         }
+
+		.close:hover, .close:focus{
+			color:#000;
+			text-decoration: none;
+			cursor: pointer;
+		}
 	</style>
 
 
@@ -155,12 +171,12 @@ else{
 		<div class="page-content-wrapper">
 			<?php echo $this->fetch('content'); ?>
 		</div>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup"> Launch demo modal </button>
+        <button type="button" class="btn btn-danger btn-lg btnPopup" data-toggle="modal" data-target="#lab-slide-bottom-popup"> Notification </button>
 
         <div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
             <div class="lab-modal-body">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <p>test</p>
+                <p>Lorem ipsum</p>
             </div>
             <!-- /.modal-body -->
         </div>

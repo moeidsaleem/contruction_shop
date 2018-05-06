@@ -45,11 +45,10 @@
 			width:30%;
 			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 		}
-
+        /*new popup*/
         .modal.fade.in .lab-modal-body {
             bottom: 0;
             opacity: 1;
-            z
         }
 
         .lab-modal-body h1 {
@@ -84,10 +83,6 @@
             margin-top: -20px;
             margin-right: -20px;
             text-shadow: 0 1px 0 #ffffff;
-        }
-
-        .popup-button {
-            margin-top: 70px;
         }
 	</style>
 

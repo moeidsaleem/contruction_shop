@@ -29,22 +29,66 @@
 		}
 
 		.modal{
-			position:fixed;
-			z-index:1;
-			left:0;
-			top:0;
-			height:100%;
-			width: 100%;
-			overflow:auto;
+			/*position:fixed;*/
+			/*z-index:1;*/
+			/*left:0;*/
+			/*top:0;*/
+			/*height:100%;*/
+			/*width: 100%;*/
+			/*overflow:auto;*/
 		}
 
 		.modal-content{
 			background-color:#f4f4f4;
-			margin:80%;
+			/*margin:80%;*/
 			padding:20px;
 			width:30%;
 			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 		}
+
+        .modal.fade.in .lab-modal-body {
+            bottom: 0;
+            opacity: 1;
+            z
+        }
+
+        .lab-modal-body h1 {
+            font-size: 4rem;
+        }
+
+        .lab-modal-body p {
+            margin: 0 0 1.62rem 0;
+            line-height: 1.62;
+            font-weight: 300;
+            font-size: 1.62rem;
+            color: #666;
+        }
+
+        .lab-modal-body {
+            position: relative;
+            bottom: -250px;
+            margin: 150px auto 0;
+            padding: 40px;
+            max-width: 60%;
+            height: auto;
+            background-color: rgb(248, 250, 247);
+            border: 1px solid #BEBEBE;
+            opacity: 0;
+            -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+            -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+            -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+            transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+        }
+
+        .close {
+            margin-top: -20px;
+            margin-right: -20px;
+            text-shadow: 0 1px 0 #ffffff;
+        }
+
+        .popup-button {
+            margin-top: 70px;
+        }
 	</style>
 
 
@@ -116,9 +160,20 @@ else{
 		<div class="page-content-wrapper">
 			<?php echo $this->fetch('content'); ?>
 		</div>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup"> Launch demo modal </button>
+
+        <div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
+            <div class="lab-modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <p>test</p>
+            </div>
+            <!-- /.modal-body -->
+        </div>
+
 		<!-- END CONTENT -->
+
 	</div>
-    
+
 	<?php
 		echo $this->element('logoutCountDown');
 	?>
@@ -128,13 +183,6 @@ else{
 }
 ?>
 
-<button id="btnModal" class="button" data-toggle="modal" data-target="#modalPopup">Notification</button>
-<div id="modalPopup" class="modal">
-	<div class="modal-content">
-		<span class="btnClose">&times;</span>
-		<p>Lorem ipsum</p>
-	</div>
-</div>
 
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->

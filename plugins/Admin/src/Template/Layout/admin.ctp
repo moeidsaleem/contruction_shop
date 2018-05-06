@@ -12,6 +12,40 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 	<meta content="" name="description"/>
 	<meta content="" name="author"/>
+	<style>
+		.button{
+			background-color: #1CAF9A;
+			color:#fff;
+			border:none;
+			border-radius:4px;
+			padding:7px;
+			position:fixed;
+			bottom: 50px;
+			right:30px;
+
+		}
+		.button:hover{
+			background:#364150;
+		}
+
+		.modal{
+			position:fixed;
+			z-index:1;
+			left:0;
+			top:0;
+			height:100%;
+			width: 100%;
+			overflow:auto;
+		}
+
+		.modal-content{
+			background-color:#f4f4f4;
+			margin:80%;
+			padding:20px;
+			width:30%;
+			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+		}
+	</style>
 
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -94,6 +128,14 @@ else{
 }
 ?>
 
+<button id="btnModal" class="button" data-toggle="modal" data-target="#modalPopup">Notification</button>
+<div id="modalPopup" class="modal">
+	<div class="modal-content">
+		<span class="btnClose">&times;</span>
+		<p>Lorem ipsum</p>
+	</div>
+</div>
+
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
 
@@ -131,13 +173,15 @@ echo $this->Html->script($script_include);
 echo $this->fetch('script');
 ?>
 
-
 <script>
 	jQuery(document).ready(function() {
 		Metronic.init(); // init metronic core components
 		Layout.init(); // init current layout
 	});
 	var SessionExprieIn = '<?php echo $SessionExprieIn ?>';
+</script>
+<script>
+$(document).on('ready',function(){$('#popupModal').modal('show');});
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

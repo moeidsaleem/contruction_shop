@@ -50,19 +50,19 @@
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('total_cost', mb_convert_case('total_cost', MB_CASE_TITLE, "UTF-8"), ['for' => 'total_cost', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('total_cost',['class'=>'form-control','placeholder' => 'Total Cost', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('total_cost',['class'=>'form-control','placeholder' => 'Total Cost', 'label' => false,'id'=>'totalOut_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('paid', mb_convert_case('paid', MB_CASE_TITLE, "UTF-8"), ['for' => 'paid', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('paid',['class'=>'form-control','placeholder' => 'Paid', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('paid',['class'=>'form-control','placeholder' => 'Paid', 'label' => false,'id'=>'paidOut_id']); ?>
                                                 </div>
                                             </div>
                                                                                     <div class="form-group">
                                                 <?php echo $this->Form->label('remained', mb_convert_case('remained', MB_CASE_TITLE, "UTF-8"), ['for' => 'remained', 'class' => 'col-md-3 control-label']); ?>
                                                 <div class="col-md-9">
-                                                    <?php echo $this->Form->input('remained',['class'=>'form-control','placeholder' => 'Remained', 'label' => false]); ?>
+                                                    <?php echo $this->Form->input('remained',['class'=>'form-control','placeholder' => 'Remained', 'label' => false,'id'=>'remainOut_id']); ?>
                                                 </div>
                                             </div>
                                                             </div>

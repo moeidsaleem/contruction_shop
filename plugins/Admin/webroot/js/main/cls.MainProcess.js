@@ -16,6 +16,7 @@ function clsMainProcess() {
         this.amountInIsNumeric();
         this.cpuInIsNumeric();
         this.totalInIsNumeric();
+        this.remainOutCalculation();
     };
 
     //bind event
@@ -190,17 +191,11 @@ function clsMainProcess() {
     }
 
     this.totalInCalculation = function(){
-        console.log("1");
         $('#cpuIn_id').blur(function(){
-            console.log("2");
-            if(!$('#amountIn_id').val()){
-                console.log("3");
-                $('#totalIn_id').val(parseInt("0",10));
-                console.log("4");
+            if($('#amountIn_id').val() == 0){
+                $('#totalIn_id').val(0);
             }else{
-                console.log("5");
-                $('#totalIn_id').val(parseInt($('#cpuIn_id').val(),10)*parseInt($('#amountIn_id').val(),10));
-                console.log("7");
+                $('#totalIn_id').val($('#cpuIn_id').val()*$('#amountIn_id').val());
             }
         });
     }
@@ -230,6 +225,12 @@ function clsMainProcess() {
                 }
             }
         })
+    }
+
+    this.remainOutCalculation = function(){
+        $('#paidOut_id').blur(function(){
+            $('#remainOut_id').val($('#totalOut_id').val()-$('#paidOut_id').val());
+        });
     }
 
     this.open_modal = function (message, callback) {

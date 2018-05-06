@@ -40,10 +40,10 @@
 
 		.modal-content{
 			background-color:#f4f4f4;
-			margin:80%;
 			padding:20px;
+			margin-top:39.5%;
+			margin-left:68%;
 			width:30%;
-			box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 		}
 	</style>
 
